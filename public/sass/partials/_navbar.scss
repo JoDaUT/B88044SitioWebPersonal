@@ -1,0 +1,32 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+#header{
+    @extend .navbar, .navbar-expand-lg, .navbar-dark, .bg-primary;
+    
+    div{
+        @extend .container-fluid;
+        a{
+            @extend .navbar-brand;
+        }
+        button{
+            @extend .navbar-toggler;
+            span{
+               @extend .navbar-toggler-icon; 
+            }  
+        }
+        div{
+            @extend .collapse, .navbar-collapse;
+            ul{
+                @extend .navbar-nav;
+                li{
+                    @extend .nav-item;
+                    a{
+                        @extend .nav-link, .active;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
