@@ -1,0 +1,39 @@
+@use "./partials/_navbar.scss";
+@use "./partials/_footer.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact-form{
+    width: 40%;
+    margin: 4rem auto;
+    font-size: 18px;
+
+    h1{
+        font-size: 32px;
+        margin-bottom: 1.5rem;
+    }
+    
+
+    div{
+        @extend .mb-3;
+        label{
+            @extend .form-label;
+        }
+        input{
+            @extend .form-control;
+        }
+        #emailHelp{
+            @extend .form-text;
+        }
+        textarea{
+            @extend input;
+            height: 150px;
+        }
+    }
+    button[type="submit"]{
+        @extend .btn, .btn-primary;
+    }
+}

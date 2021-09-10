@@ -341,7 +341,7 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
-input,
+input, #contact-form div textarea,
 button,
 select,
 optgroup,
@@ -2149,7 +2149,7 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
-.form-label {
+.form-label, #contact-form div label {
   margin-bottom: 0.5rem;
 }
 
@@ -2173,13 +2173,13 @@ progress {
   font-size: 0.875rem;
 }
 
-.form-text {
+.form-text, #contact-form div #emailHelp {
   margin-top: 0.25rem;
   font-size: 0.875em;
   color: #6c757d;
 }
 
-.form-control {
+.form-control, #contact-form div input, #contact-form div textarea {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -2195,35 +2195,35 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control {
+  .form-control, #contact-form div input, #contact-form div textarea {
     transition: none;
   }
 }
-.form-control[type=file] {
+.form-control[type=file], #contact-form div input[type=file], #contact-form div textarea[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]), #contact-form div input[type=file]:not(:disabled):not([readonly]), #contact-form div textarea[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus {
+.form-control:focus, #contact-form div input:focus, #contact-form div textarea:focus {
   color: #212529;
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, #contact-form div input::-webkit-date-and-time-value, #contact-form div textarea::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::placeholder {
+.form-control::placeholder, #contact-form div input::placeholder, #contact-form div textarea::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled, #contact-form div input:disabled, #contact-form div textarea:disabled, .form-control[readonly], #contact-form div input[readonly], #contact-form div textarea[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button {
+.form-control::file-selector-button, #contact-form div input::file-selector-button, #contact-form div textarea::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2238,14 +2238,14 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button {
+  .form-control::file-selector-button, #contact-form div input::file-selector-button, #contact-form div textarea::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, #contact-form div input:hover:not(:disabled):not([readonly])::file-selector-button, #contact-form div textarea:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
-.form-control::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button, #contact-form div input::-webkit-file-upload-button, #contact-form div textarea::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -2260,11 +2260,11 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button {
+  .form-control::-webkit-file-upload-button, #contact-form div input::-webkit-file-upload-button, #contact-form div textarea::-webkit-file-upload-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, #contact-form div input:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, #contact-form div textarea:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -2318,7 +2318,7 @@ progress {
   margin-inline-end: 1rem;
 }
 
-textarea.form-control {
+textarea.form-control, #contact-form div textarea {
   min-height: calc(1.5em + 0.75rem + 2px);
 }
 textarea.form-control-sm {
@@ -2496,7 +2496,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, #contact-form .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, #contact-form .btn-check:disabled + button[type=submit] {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2587,7 +2587,7 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control,
+.form-floating > .form-control, #contact-form div .form-floating > input, #contact-form div .form-floating > textarea,
 .form-floating > .form-select {
   height: calc(3.5rem + 2px);
   line-height: 1.25;
@@ -2608,17 +2608,17 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control {
+.form-floating > .form-control, #contact-form div .form-floating > input, #contact-form div .form-floating > textarea {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::placeholder {
+.form-floating > .form-control::placeholder, #contact-form div .form-floating > input::placeholder, #contact-form div .form-floating > textarea::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+.form-floating > .form-control:focus, #contact-form div .form-floating > input:focus, #contact-form div .form-floating > textarea:focus, .form-floating > .form-control:not(:placeholder-shown), #contact-form div .form-floating > input:not(:placeholder-shown), #contact-form div .form-floating > textarea:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill {
+.form-floating > .form-control:-webkit-autofill, #contact-form div .form-floating > input:-webkit-autofill, #contact-form div .form-floating > textarea:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -2626,13 +2626,15 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:focus ~ label, #contact-form div .form-floating > input:focus ~ label, #contact-form div .form-floating > textarea:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
+#contact-form div .form-floating > input:not(:placeholder-shown) ~ label,
+#contact-form div .form-floating > textarea:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, #contact-form div .form-floating > input:-webkit-autofill ~ label, #contact-form div .form-floating > textarea:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -2644,22 +2646,22 @@ textarea.form-control-lg {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control,
+.input-group > .form-control, #contact-form div .input-group > input, #contact-form div .input-group > textarea,
 .input-group > .form-select {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus,
+.input-group > .form-control:focus, #contact-form div .input-group > input:focus, #contact-form div .input-group > textarea:focus,
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn {
+.input-group .btn, .input-group #contact-form button[type=submit], #contact-form .input-group button[type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group #contact-form button[type=submit]:focus, #contact-form .input-group button[type=submit]:focus {
   z-index: 3;
 }
 
@@ -2678,19 +2680,21 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control,
+.input-group-lg > .form-control, #contact-form div .input-group-lg > input, #contact-form div .input-group-lg > textarea,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+#contact-form .input-group-lg > button[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control,
+.input-group-sm > .form-control, #contact-form div .input-group-sm > input, #contact-form div .input-group-sm > textarea,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+#contact-form .input-group-sm > button[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2746,7 +2750,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .form-control.is-valid {
+.was-validated .form-control:valid, .was-validated #contact-form div input:valid, #contact-form div .was-validated input:valid, .was-validated #contact-form div textarea:valid, #contact-form div .was-validated textarea:valid, .form-control.is-valid, #contact-form div input.is-valid, #contact-form div textarea.is-valid {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -2754,12 +2758,12 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+.was-validated .form-control:valid:focus, .was-validated #contact-form div input:valid:focus, #contact-form div .was-validated input:valid:focus, .was-validated #contact-form div textarea:valid:focus, #contact-form div .was-validated textarea:valid:focus, .form-control.is-valid:focus, #contact-form div input.is-valid:focus, #contact-form div textarea.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
+.was-validated textarea.form-control:valid, .was-validated #contact-form div textarea:valid, #contact-form div .was-validated textarea:valid, textarea.form-control.is-valid, #contact-form div textarea.is-valid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -2795,12 +2799,12 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .input-group .form-control.is-valid,
+.was-validated .input-group .form-control:valid, .was-validated .input-group #contact-form div input:valid, #contact-form div .was-validated .input-group input:valid, .was-validated .input-group #contact-form div textarea:valid, #contact-form div .was-validated .input-group textarea:valid, .input-group .form-control.is-valid, .input-group #contact-form div input.is-valid, #contact-form div .input-group input.is-valid, .input-group #contact-form div textarea.is-valid, #contact-form div .input-group textarea.is-valid,
 .was-validated .input-group .form-select:valid,
 .input-group .form-select.is-valid {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .input-group .form-control.is-valid:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .input-group #contact-form div input:valid:focus, #contact-form div .was-validated .input-group input:valid:focus, .was-validated .input-group #contact-form div textarea:valid:focus, #contact-form div .was-validated .input-group textarea:valid:focus, .input-group .form-control.is-valid:focus, .input-group #contact-form div input.is-valid:focus, #contact-form div .input-group input.is-valid:focus, .input-group #contact-form div textarea.is-valid:focus, #contact-form div .input-group textarea.is-valid:focus,
 .was-validated .input-group .form-select:valid:focus,
 .input-group .form-select.is-valid:focus {
   z-index: 3;
@@ -2835,7 +2839,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid, .was-validated #contact-form div input:invalid, #contact-form div .was-validated input:invalid, .was-validated #contact-form div textarea:invalid, #contact-form div .was-validated textarea:invalid, .form-control.is-invalid, #contact-form div input.is-invalid, #contact-form div textarea.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -2843,12 +2847,12 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .was-validated #contact-form div input:invalid:focus, #contact-form div .was-validated input:invalid:focus, .was-validated #contact-form div textarea:invalid:focus, #contact-form div .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, #contact-form div input.is-invalid:focus, #contact-form div textarea.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
+.was-validated textarea.form-control:invalid, .was-validated #contact-form div textarea:invalid, #contact-form div .was-validated textarea:invalid, textarea.form-control.is-invalid, #contact-form div textarea.is-invalid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -2884,18 +2888,18 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .input-group .form-control.is-invalid,
+.was-validated .input-group .form-control:invalid, .was-validated .input-group #contact-form div input:invalid, #contact-form div .was-validated .input-group input:invalid, .was-validated .input-group #contact-form div textarea:invalid, #contact-form div .was-validated .input-group textarea:invalid, .input-group .form-control.is-invalid, .input-group #contact-form div input.is-invalid, #contact-form div .input-group input.is-invalid, .input-group #contact-form div textarea.is-invalid, #contact-form div .input-group textarea.is-invalid,
 .was-validated .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .input-group .form-control.is-invalid:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group #contact-form div input:invalid:focus, #contact-form div .was-validated .input-group input:invalid:focus, .was-validated .input-group #contact-form div textarea:invalid:focus, #contact-form div .was-validated .input-group textarea:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group #contact-form div input.is-invalid:focus, #contact-form div .input-group input.is-invalid:focus, .input-group #contact-form div textarea.is-invalid:focus, #contact-form div .input-group textarea.is-invalid:focus,
 .was-validated .input-group .form-select:invalid:focus,
 .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
-.btn {
+.btn, #contact-form button[type=submit] {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -2913,47 +2917,47 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, #contact-form button[type=submit] {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, #contact-form button[type=submit]:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + .btn, #contact-form .btn-check:focus + button[type=submit], .btn:focus, #contact-form button[type=submit]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, #contact-form button[type=submit]:disabled, .btn.disabled, #contact-form button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled #contact-form button[type=submit], #contact-form fieldset:disabled button[type=submit] {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary {
+.btn-primary, #contact-form button[type=submit] {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-primary:hover {
+.btn-primary:hover, #contact-form button[type=submit]:hover {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, #contact-form .btn-check:focus + button[type=submit], .btn-primary:focus, #contact-form button[type=submit]:focus {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, #header div div ul li a.btn-primary, .show > .btn-primary.dropdown-toggle {
+.btn-check:checked + .btn-primary, #contact-form .btn-check:checked + button[type=submit], .btn-check:active + .btn-primary, #contact-form .btn-check:active + button[type=submit], .btn-primary:active, #contact-form button[type=submit]:active, .btn-primary.active, #contact-form button.active[type=submit], #header div div ul li a.btn-primary, .show > .btn-primary.dropdown-toggle, #contact-form .show > button.dropdown-toggle[type=submit] {
   color: #fff;
   background-color: #0a58ca;
   border-color: #0a53be;
 }
-.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, #header div div ul li a.btn-primary:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, #contact-form .btn-check:checked + button[type=submit]:focus, .btn-check:active + .btn-primary:focus, #contact-form .btn-check:active + button[type=submit]:focus, .btn-primary:active:focus, #contact-form button[type=submit]:active:focus, .btn-primary.active:focus, #contact-form button.active[type=submit]:focus, #header div div ul li a.btn-primary:focus, .show > .btn-primary.dropdown-toggle:focus, #contact-form .show > button.dropdown-toggle[type=submit]:focus {
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-primary:disabled, .btn-primary.disabled {
+.btn-primary:disabled, #contact-form button[type=submit]:disabled, .btn-primary.disabled, #contact-form button.disabled[type=submit] {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
@@ -3381,13 +3385,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, #contact-form .btn-group-lg > button[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, #contact-form .btn-group-sm > button[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -3742,24 +3746,36 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, #contact-form .btn-group > button[type=submit],
+.btn-group-vertical > .btn,
+#contact-form .btn-group-vertical > button[type=submit] {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:checked + .btn, #contact-form .btn-group > .btn-check:checked + button[type=submit],
 .btn-group > .btn-check:focus + .btn,
+#contact-form .btn-group > .btn-check:focus + button[type=submit],
 .btn-group > .btn:hover,
+#contact-form .btn-group > button[type=submit]:hover,
 .btn-group > .btn:focus,
+#contact-form .btn-group > button[type=submit]:focus,
 .btn-group > .btn:active,
+#contact-form .btn-group > button[type=submit]:active,
 .btn-group > .btn.active,
+#contact-form .btn-group > button.active[type=submit],
 #header div div ul li .btn-group > a.btn,
 .btn-group-vertical > .btn-check:checked + .btn,
+#contact-form .btn-group-vertical > .btn-check:checked + button[type=submit],
 .btn-group-vertical > .btn-check:focus + .btn,
+#contact-form .btn-group-vertical > .btn-check:focus + button[type=submit],
 .btn-group-vertical > .btn:hover,
+#contact-form .btn-group-vertical > button[type=submit]:hover,
 .btn-group-vertical > .btn:focus,
+#contact-form .btn-group-vertical > button[type=submit]:focus,
 .btn-group-vertical > .btn:active,
+#contact-form .btn-group-vertical > button[type=submit]:active,
 .btn-group-vertical > .btn.active,
+#contact-form .btn-group-vertical > button.active[type=submit],
 #header div div ul li .btn-group-vertical > a.btn {
   z-index: 1;
 }
@@ -3773,18 +3789,21 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), #contact-form .btn-group > button[type=submit]:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), #contact-form .btn-group > button[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+#contact-form .btn-group > .btn-group:not(:last-child) > button[type=submit] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), #contact-form .btn-group > button[type=submit]:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
+#contact-form .btn-group > :not(.btn-check) + button[type=submit],
+.btn-group > .btn-group:not(:first-child) > .btn,
+#contact-form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3800,12 +3819,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #contact-form .btn-group-sm > button[type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #contact-form .btn-group-lg > button[type=submit] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3815,21 +3834,23 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, #contact-form .btn-group-vertical > button[type=submit],
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), #contact-form .btn-group-vertical > button[type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), #contact-form .btn-group-vertical > button[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+#contact-form .btn-group-vertical > .btn-group:not(:last-child) > button[type=submit] {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn ~ .btn, #contact-form .btn-group-vertical > button[type=submit] ~ .btn, #contact-form .btn-group-vertical > .btn ~ button[type=submit], #contact-form .btn-group-vertical > button[type=submit] ~ button[type=submit],
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+#contact-form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4837,7 +4858,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, #contact-form button[type=submit] .badge {
   position: relative;
   top: -1px;
 }
@@ -6282,7 +6303,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before {
+.placeholder.btn::before, #contact-form button.placeholder[type=submit]::before {
   display: inline-block;
   content: "";
 }
@@ -7253,7 +7274,7 @@ textarea.form-control-lg {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3 {
+.mb-3, #contact-form div {
   margin-bottom: 1rem !important;
 }
 
@@ -11503,7 +11524,7 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
-input,
+input, #contact-form div textarea,
 button,
 select,
 optgroup,
@@ -13310,7 +13331,7 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
-.form-label {
+.form-label, #contact-form div label {
   margin-bottom: 0.5rem;
 }
 
@@ -13334,13 +13355,13 @@ progress {
   font-size: 0.875rem;
 }
 
-.form-text {
+.form-text, #contact-form div #emailHelp {
   margin-top: 0.25rem;
   font-size: 0.875em;
   color: #6c757d;
 }
 
-.form-control {
+.form-control, #contact-form div input, #contact-form div textarea {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -13356,35 +13377,35 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control {
+  .form-control, #contact-form div input, #contact-form div textarea {
     transition: none;
   }
 }
-.form-control[type=file] {
+.form-control[type=file], #contact-form div input[type=file], #contact-form div textarea[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]), #contact-form div input[type=file]:not(:disabled):not([readonly]), #contact-form div textarea[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus {
+.form-control:focus, #contact-form div input:focus, #contact-form div textarea:focus {
   color: #212529;
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, #contact-form div input::-webkit-date-and-time-value, #contact-form div textarea::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::placeholder {
+.form-control::placeholder, #contact-form div input::placeholder, #contact-form div textarea::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled, #contact-form div input:disabled, #contact-form div textarea:disabled, .form-control[readonly], #contact-form div input[readonly], #contact-form div textarea[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button {
+.form-control::file-selector-button, #contact-form div input::file-selector-button, #contact-form div textarea::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -13399,14 +13420,14 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button {
+  .form-control::file-selector-button, #contact-form div input::file-selector-button, #contact-form div textarea::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, #contact-form div input:hover:not(:disabled):not([readonly])::file-selector-button, #contact-form div textarea:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
-.form-control::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button, #contact-form div input::-webkit-file-upload-button, #contact-form div textarea::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -13421,11 +13442,11 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button {
+  .form-control::-webkit-file-upload-button, #contact-form div input::-webkit-file-upload-button, #contact-form div textarea::-webkit-file-upload-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, #contact-form div input:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, #contact-form div textarea:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -13479,7 +13500,7 @@ progress {
   margin-inline-end: 1rem;
 }
 
-textarea.form-control {
+textarea.form-control, #contact-form div textarea {
   min-height: calc(1.5em + 0.75rem + 2px);
 }
 textarea.form-control-sm {
@@ -13657,7 +13678,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, #contact-form .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, #contact-form .btn-check:disabled + button[type=submit] {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -13748,7 +13769,7 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control,
+.form-floating > .form-control, #contact-form div .form-floating > input, #contact-form div .form-floating > textarea,
 .form-floating > .form-select {
   height: calc(3.5rem + 2px);
   line-height: 1.25;
@@ -13769,17 +13790,17 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control {
+.form-floating > .form-control, #contact-form div .form-floating > input, #contact-form div .form-floating > textarea {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::placeholder {
+.form-floating > .form-control::placeholder, #contact-form div .form-floating > input::placeholder, #contact-form div .form-floating > textarea::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+.form-floating > .form-control:focus, #contact-form div .form-floating > input:focus, #contact-form div .form-floating > textarea:focus, .form-floating > .form-control:not(:placeholder-shown), #contact-form div .form-floating > input:not(:placeholder-shown), #contact-form div .form-floating > textarea:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill {
+.form-floating > .form-control:-webkit-autofill, #contact-form div .form-floating > input:-webkit-autofill, #contact-form div .form-floating > textarea:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -13787,13 +13808,15 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:focus ~ label, #contact-form div .form-floating > input:focus ~ label, #contact-form div .form-floating > textarea:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
+#contact-form div .form-floating > input:not(:placeholder-shown) ~ label,
+#contact-form div .form-floating > textarea:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, #contact-form div .form-floating > input:-webkit-autofill ~ label, #contact-form div .form-floating > textarea:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -13805,22 +13828,22 @@ textarea.form-control-lg {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control,
+.input-group > .form-control, #contact-form div .input-group > input, #contact-form div .input-group > textarea,
 .input-group > .form-select {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus,
+.input-group > .form-control:focus, #contact-form div .input-group > input:focus, #contact-form div .input-group > textarea:focus,
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn {
+.input-group .btn, .input-group #contact-form button[type=submit], #contact-form .input-group button[type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group #contact-form button[type=submit]:focus, #contact-form .input-group button[type=submit]:focus {
   z-index: 3;
 }
 
@@ -13839,19 +13862,21 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control,
+.input-group-lg > .form-control, #contact-form div .input-group-lg > input, #contact-form div .input-group-lg > textarea,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+#contact-form .input-group-lg > button[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control,
+.input-group-sm > .form-control, #contact-form div .input-group-sm > input, #contact-form div .input-group-sm > textarea,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+#contact-form .input-group-sm > button[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -13907,7 +13932,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .form-control.is-valid {
+.was-validated .form-control:valid, .was-validated #contact-form div input:valid, #contact-form div .was-validated input:valid, .was-validated #contact-form div textarea:valid, #contact-form div .was-validated textarea:valid, .form-control.is-valid, #contact-form div input.is-valid, #contact-form div textarea.is-valid {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -13915,12 +13940,12 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+.was-validated .form-control:valid:focus, .was-validated #contact-form div input:valid:focus, #contact-form div .was-validated input:valid:focus, .was-validated #contact-form div textarea:valid:focus, #contact-form div .was-validated textarea:valid:focus, .form-control.is-valid:focus, #contact-form div input.is-valid:focus, #contact-form div textarea.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
+.was-validated textarea.form-control:valid, .was-validated #contact-form div textarea:valid, #contact-form div .was-validated textarea:valid, textarea.form-control.is-valid, #contact-form div textarea.is-valid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -13956,12 +13981,12 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .input-group .form-control.is-valid,
+.was-validated .input-group .form-control:valid, .was-validated .input-group #contact-form div input:valid, #contact-form div .was-validated .input-group input:valid, .was-validated .input-group #contact-form div textarea:valid, #contact-form div .was-validated .input-group textarea:valid, .input-group .form-control.is-valid, .input-group #contact-form div input.is-valid, #contact-form div .input-group input.is-valid, .input-group #contact-form div textarea.is-valid, #contact-form div .input-group textarea.is-valid,
 .was-validated .input-group .form-select:valid,
 .input-group .form-select.is-valid {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .input-group .form-control.is-valid:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .input-group #contact-form div input:valid:focus, #contact-form div .was-validated .input-group input:valid:focus, .was-validated .input-group #contact-form div textarea:valid:focus, #contact-form div .was-validated .input-group textarea:valid:focus, .input-group .form-control.is-valid:focus, .input-group #contact-form div input.is-valid:focus, #contact-form div .input-group input.is-valid:focus, .input-group #contact-form div textarea.is-valid:focus, #contact-form div .input-group textarea.is-valid:focus,
 .was-validated .input-group .form-select:valid:focus,
 .input-group .form-select.is-valid:focus {
   z-index: 3;
@@ -13996,7 +14021,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid, .was-validated #contact-form div input:invalid, #contact-form div .was-validated input:invalid, .was-validated #contact-form div textarea:invalid, #contact-form div .was-validated textarea:invalid, .form-control.is-invalid, #contact-form div input.is-invalid, #contact-form div textarea.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -14004,12 +14029,12 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .was-validated #contact-form div input:invalid:focus, #contact-form div .was-validated input:invalid:focus, .was-validated #contact-form div textarea:invalid:focus, #contact-form div .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, #contact-form div input.is-invalid:focus, #contact-form div textarea.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
+.was-validated textarea.form-control:invalid, .was-validated #contact-form div textarea:invalid, #contact-form div .was-validated textarea:invalid, textarea.form-control.is-invalid, #contact-form div textarea.is-invalid {
   padding-right: calc(1.5em + 0.75rem);
   background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -14045,18 +14070,18 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .input-group .form-control.is-invalid,
+.was-validated .input-group .form-control:invalid, .was-validated .input-group #contact-form div input:invalid, #contact-form div .was-validated .input-group input:invalid, .was-validated .input-group #contact-form div textarea:invalid, #contact-form div .was-validated .input-group textarea:invalid, .input-group .form-control.is-invalid, .input-group #contact-form div input.is-invalid, #contact-form div .input-group input.is-invalid, .input-group #contact-form div textarea.is-invalid, #contact-form div .input-group textarea.is-invalid,
 .was-validated .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .input-group .form-control.is-invalid:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group #contact-form div input:invalid:focus, #contact-form div .was-validated .input-group input:invalid:focus, .was-validated .input-group #contact-form div textarea:invalid:focus, #contact-form div .was-validated .input-group textarea:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group #contact-form div input.is-invalid:focus, #contact-form div .input-group input.is-invalid:focus, .input-group #contact-form div textarea.is-invalid:focus, #contact-form div .input-group textarea.is-invalid:focus,
 .was-validated .input-group .form-select:invalid:focus,
 .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
-.btn {
+.btn, #contact-form button[type=submit] {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -14074,47 +14099,47 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, #contact-form button[type=submit] {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, #contact-form button[type=submit]:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + .btn, #contact-form .btn-check:focus + button[type=submit], .btn:focus, #contact-form button[type=submit]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, #contact-form button[type=submit]:disabled, .btn.disabled, #contact-form button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled #contact-form button[type=submit], #contact-form fieldset:disabled button[type=submit] {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary {
+.btn-primary, #contact-form button[type=submit] {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-primary:hover {
+.btn-primary:hover, #contact-form button[type=submit]:hover {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, #contact-form .btn-check:focus + button[type=submit], .btn-primary:focus, #contact-form button[type=submit]:focus {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+.btn-check:checked + .btn-primary, #contact-form .btn-check:checked + button[type=submit], .btn-check:active + .btn-primary, #contact-form .btn-check:active + button[type=submit], .btn-primary:active, #contact-form button[type=submit]:active, .btn-primary.active, #contact-form button.active[type=submit], .show > .btn-primary.dropdown-toggle, #contact-form .show > button.dropdown-toggle[type=submit] {
   color: #fff;
   background-color: #0a58ca;
   border-color: #0a53be;
 }
-.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, #contact-form .btn-check:checked + button[type=submit]:focus, .btn-check:active + .btn-primary:focus, #contact-form .btn-check:active + button[type=submit]:focus, .btn-primary:active:focus, #contact-form button[type=submit]:active:focus, .btn-primary.active:focus, #contact-form button.active[type=submit]:focus, .show > .btn-primary.dropdown-toggle:focus, #contact-form .show > button.dropdown-toggle[type=submit]:focus {
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-primary:disabled, .btn-primary.disabled {
+.btn-primary:disabled, #contact-form button[type=submit]:disabled, .btn-primary.disabled, #contact-form button.disabled[type=submit] {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
@@ -14542,13 +14567,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, #contact-form .btn-group-lg > button[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, #contact-form .btn-group-sm > button[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -14903,23 +14928,35 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, #contact-form .btn-group > button[type=submit],
+.btn-group-vertical > .btn,
+#contact-form .btn-group-vertical > button[type=submit] {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:checked + .btn, #contact-form .btn-group > .btn-check:checked + button[type=submit],
 .btn-group > .btn-check:focus + .btn,
+#contact-form .btn-group > .btn-check:focus + button[type=submit],
 .btn-group > .btn:hover,
+#contact-form .btn-group > button[type=submit]:hover,
 .btn-group > .btn:focus,
+#contact-form .btn-group > button[type=submit]:focus,
 .btn-group > .btn:active,
+#contact-form .btn-group > button[type=submit]:active,
 .btn-group > .btn.active,
+#contact-form .btn-group > button.active[type=submit],
 .btn-group-vertical > .btn-check:checked + .btn,
+#contact-form .btn-group-vertical > .btn-check:checked + button[type=submit],
 .btn-group-vertical > .btn-check:focus + .btn,
+#contact-form .btn-group-vertical > .btn-check:focus + button[type=submit],
 .btn-group-vertical > .btn:hover,
+#contact-form .btn-group-vertical > button[type=submit]:hover,
 .btn-group-vertical > .btn:focus,
+#contact-form .btn-group-vertical > button[type=submit]:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+#contact-form .btn-group-vertical > button[type=submit]:active,
+.btn-group-vertical > .btn.active,
+#contact-form .btn-group-vertical > button.active[type=submit] {
   z-index: 1;
 }
 
@@ -14932,18 +14969,21 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), #contact-form .btn-group > button[type=submit]:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), #contact-form .btn-group > button[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+#contact-form .btn-group > .btn-group:not(:last-child) > button[type=submit] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), #contact-form .btn-group > button[type=submit]:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
+#contact-form .btn-group > :not(.btn-check) + button[type=submit],
+.btn-group > .btn-group:not(:first-child) > .btn,
+#contact-form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -14959,12 +14999,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #contact-form .btn-group-sm > button[type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #contact-form .btn-group-lg > button[type=submit] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -14974,21 +15014,23 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, #contact-form .btn-group-vertical > button[type=submit],
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), #contact-form .btn-group-vertical > button[type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), #contact-form .btn-group-vertical > button[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+#contact-form .btn-group-vertical > .btn-group:not(:last-child) > button[type=submit] {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn ~ .btn, #contact-form .btn-group-vertical > button[type=submit] ~ .btn, #contact-form .btn-group-vertical > .btn ~ button[type=submit], #contact-form .btn-group-vertical > button[type=submit] ~ button[type=submit],
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+#contact-form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -15961,7 +16003,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, #contact-form button[type=submit] .badge {
   position: relative;
   top: -1px;
 }
@@ -17400,7 +17442,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before {
+.placeholder.btn::before, #contact-form button.placeholder[type=submit]::before {
   display: inline-block;
   content: "";
 }
@@ -18371,7 +18413,7 @@ textarea.form-control-lg {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3 {
+.mb-3, #contact-form div {
   margin-bottom: 1rem !important;
 }
 
@@ -22616,7 +22658,7 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
-input,
+input, #contact-form div textarea,
 button,
 select,
 optgroup,
@@ -24423,7 +24465,7 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
-.form-label {
+.form-label, #contact-form div label {
   margin-bottom: 0.5rem;
 }
 
@@ -24447,13 +24489,13 @@ progress {
   font-size: 0.875rem;
 }
 
-.form-text {
+.form-text, #contact-form div #emailHelp {
   margin-top: 0.25rem;
   font-size: 0.875em;
   color: #6c757d;
 }
 
-.form-control {
+.form-control, #contact-form div input, #contact-form div textarea {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -24469,35 +24511,35 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control {
+  .form-control, #contact-form div input, #contact-form div textarea {
     transition: none;
   }
 }
-.form-control[type=file] {
+.form-control[type=file], #contact-form div input[type=file], #contact-form div textarea[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not([readonly]) {
+.form-control[type=file]:not(:disabled):not([readonly]), #contact-form div input[type=file]:not(:disabled):not([readonly]), #contact-form div textarea[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control:focus {
+.form-control:focus, #contact-form div input:focus, #contact-form div textarea:focus {
   color: #212529;
   background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-control::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, #contact-form div input::-webkit-date-and-time-value, #contact-form div textarea::-webkit-date-and-time-value {
   height: 1.5em;
 }
-.form-control::placeholder {
+.form-control::placeholder, #contact-form div input::placeholder, #contact-form div textarea::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled, #contact-form div input:disabled, #contact-form div textarea:disabled, .form-control[readonly], #contact-form div input[readonly], #contact-form div textarea[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
-.form-control::file-selector-button {
+.form-control::file-selector-button, #contact-form div input::file-selector-button, #contact-form div textarea::file-selector-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -24512,14 +24554,14 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::file-selector-button {
+  .form-control::file-selector-button, #contact-form div input::file-selector-button, #contact-form div textarea::file-selector-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, #contact-form div input:hover:not(:disabled):not([readonly])::file-selector-button, #contact-form div textarea:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
-.form-control::-webkit-file-upload-button {
+.form-control::-webkit-file-upload-button, #contact-form div input::-webkit-file-upload-button, #contact-form div textarea::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
@@ -24534,11 +24576,11 @@ progress {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button {
+  .form-control::-webkit-file-upload-button, #contact-form div input::-webkit-file-upload-button, #contact-form div textarea::-webkit-file-upload-button {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, #contact-form div input:hover:not(:disabled):not([readonly])::-webkit-file-upload-button, #contact-form div textarea:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -24770,7 +24812,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, #contact-form .btn-check[disabled] + button[type=submit], .btn-check:disabled + .btn, #contact-form .btn-check:disabled + button[type=submit] {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -24861,7 +24903,7 @@ textarea.form-control-lg {
 .form-floating {
   position: relative;
 }
-.form-floating > .form-control,
+.form-floating > .form-control, #contact-form div .form-floating > input, #contact-form div .form-floating > textarea,
 .form-floating > .form-select {
   height: calc(3.5rem + 2px);
   line-height: 1.25;
@@ -24882,17 +24924,17 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.form-floating > .form-control {
+.form-floating > .form-control, #contact-form div .form-floating > input, #contact-form div .form-floating > textarea {
   padding: 1rem 0.75rem;
 }
-.form-floating > .form-control::placeholder {
+.form-floating > .form-control::placeholder, #contact-form div .form-floating > input::placeholder, #contact-form div .form-floating > textarea::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+.form-floating > .form-control:focus, #contact-form div .form-floating > input:focus, #contact-form div .form-floating > textarea:focus, .form-floating > .form-control:not(:placeholder-shown), #contact-form div .form-floating > input:not(:placeholder-shown), #contact-form div .form-floating > textarea:not(:placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:-webkit-autofill {
+.form-floating > .form-control:-webkit-autofill, #contact-form div .form-floating > input:-webkit-autofill, #contact-form div .form-floating > textarea:-webkit-autofill {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -24900,13 +24942,15 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:focus ~ label, #contact-form div .form-floating > input:focus ~ label, #contact-form div .form-floating > textarea:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
+#contact-form div .form-floating > input:not(:placeholder-shown) ~ label,
+#contact-form div .form-floating > textarea:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
-.form-floating > .form-control:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, #contact-form div .form-floating > input:-webkit-autofill ~ label, #contact-form div .form-floating > textarea:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -24918,22 +24962,22 @@ textarea.form-control-lg {
   align-items: stretch;
   width: 100%;
 }
-.input-group > .form-control,
+.input-group > .form-control, #contact-form div .input-group > input, #contact-form div .input-group > textarea,
 .input-group > .form-select {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
 }
-.input-group > .form-control:focus,
+.input-group > .form-control:focus, #contact-form div .input-group > input:focus, #contact-form div .input-group > textarea:focus,
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn {
+.input-group .btn, .input-group #contact-form button[type=submit], #contact-form .input-group button[type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group #contact-form button[type=submit]:focus, #contact-form .input-group button[type=submit]:focus {
   z-index: 3;
 }
 
@@ -24952,19 +24996,21 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 
-.input-group-lg > .form-control,
+.input-group-lg > .form-control, #contact-form div .input-group-lg > input, #contact-form div .input-group-lg > textarea,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+#contact-form .input-group-lg > button[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control,
+.input-group-sm > .form-control, #contact-form div .input-group-sm > input, #contact-form div .input-group-sm > textarea,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+#contact-form .input-group-sm > button[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -25020,7 +25066,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:valid, .form-control.is-valid {
+.was-validated .form-control:valid, .was-validated #contact-form div input:valid, .was-validated #contact-form div textarea:valid, #contact-form div .was-validated input:valid, #contact-form div .was-validated textarea:valid, .form-control.is-valid, #contact-form div input.is-valid, #contact-form div textarea.is-valid {
   border-color: #198754;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -25028,7 +25074,7 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+.was-validated .form-control:valid:focus, .was-validated #contact-form div input:valid:focus, .was-validated #contact-form div textarea:valid:focus, #contact-form div .was-validated input:valid:focus, #contact-form div .was-validated textarea:valid:focus, .form-control.is-valid:focus, #contact-form div input.is-valid:focus, #contact-form div textarea.is-valid:focus {
   border-color: #198754;
   box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
@@ -25069,12 +25115,12 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:valid, .input-group .form-control.is-valid,
+.was-validated .input-group .form-control:valid, .was-validated .input-group #contact-form div input:valid, .was-validated .input-group #contact-form div textarea:valid, #contact-form div .was-validated .input-group input:valid, #contact-form div .was-validated .input-group textarea:valid, .input-group .form-control.is-valid, .input-group #contact-form div input.is-valid, .input-group #contact-form div textarea.is-valid, #contact-form div .input-group input.is-valid, #contact-form div .input-group textarea.is-valid,
 .was-validated .input-group .form-select:valid,
 .input-group .form-select.is-valid {
   z-index: 1;
 }
-.was-validated .input-group .form-control:valid:focus, .input-group .form-control.is-valid:focus,
+.was-validated .input-group .form-control:valid:focus, .was-validated .input-group #contact-form div input:valid:focus, .was-validated .input-group #contact-form div textarea:valid:focus, #contact-form div .was-validated .input-group input:valid:focus, #contact-form div .was-validated .input-group textarea:valid:focus, .input-group .form-control.is-valid:focus, .input-group #contact-form div input.is-valid:focus, .input-group #contact-form div textarea.is-valid:focus, #contact-form div .input-group input.is-valid:focus, #contact-form div .input-group textarea.is-valid:focus,
 .was-validated .input-group .form-select:valid:focus,
 .input-group .form-select.is-valid:focus {
   z-index: 3;
@@ -25109,7 +25155,7 @@ textarea.form-control-lg {
   display: block;
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid, .was-validated #contact-form div input:invalid, .was-validated #contact-form div textarea:invalid, #contact-form div .was-validated input:invalid, #contact-form div .was-validated textarea:invalid, .form-control.is-invalid, #contact-form div input.is-invalid, #contact-form div textarea.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -25117,7 +25163,7 @@ textarea.form-control-lg {
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
-.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .was-validated #contact-form div input:invalid:focus, .was-validated #contact-form div textarea:invalid:focus, #contact-form div .was-validated input:invalid:focus, #contact-form div .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, #contact-form div input.is-invalid:focus, #contact-form div textarea.is-invalid:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
@@ -25158,18 +25204,18 @@ textarea.form-control-lg {
   margin-left: 0.5em;
 }
 
-.was-validated .input-group .form-control:invalid, .input-group .form-control.is-invalid,
+.was-validated .input-group .form-control:invalid, .was-validated .input-group #contact-form div input:invalid, .was-validated .input-group #contact-form div textarea:invalid, #contact-form div .was-validated .input-group input:invalid, #contact-form div .was-validated .input-group textarea:invalid, .input-group .form-control.is-invalid, .input-group #contact-form div input.is-invalid, .input-group #contact-form div textarea.is-invalid, #contact-form div .input-group input.is-invalid, #contact-form div .input-group textarea.is-invalid,
 .was-validated .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
   z-index: 2;
 }
-.was-validated .input-group .form-control:invalid:focus, .input-group .form-control.is-invalid:focus,
+.was-validated .input-group .form-control:invalid:focus, .was-validated .input-group #contact-form div input:invalid:focus, .was-validated .input-group #contact-form div textarea:invalid:focus, #contact-form div .was-validated .input-group input:invalid:focus, #contact-form div .was-validated .input-group textarea:invalid:focus, .input-group .form-control.is-invalid:focus, .input-group #contact-form div input.is-invalid:focus, .input-group #contact-form div textarea.is-invalid:focus, #contact-form div .input-group input.is-invalid:focus, #contact-form div .input-group textarea.is-invalid:focus,
 .was-validated .input-group .form-select:invalid:focus,
 .input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
-.btn {
+.btn, #contact-form button[type=submit] {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -25187,47 +25233,47 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, #contact-form button[type=submit] {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, #contact-form button[type=submit]:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .btn:focus {
+.btn-check:focus + .btn, #contact-form .btn-check:focus + button[type=submit], .btn:focus, #contact-form button[type=submit]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, #contact-form button[type=submit]:disabled, .btn.disabled, #contact-form button.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled #contact-form button[type=submit], #contact-form fieldset:disabled button[type=submit] {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary {
+.btn-primary, #contact-form button[type=submit] {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-primary:hover {
+.btn-primary:hover, #contact-form button[type=submit]:hover {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, #contact-form .btn-check:focus + button[type=submit], .btn-primary:focus, #contact-form button[type=submit]:focus {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+.btn-check:checked + .btn-primary, #contact-form .btn-check:checked + button[type=submit], .btn-check:active + .btn-primary, #contact-form .btn-check:active + button[type=submit], .btn-primary:active, #contact-form button[type=submit]:active, .btn-primary.active, #contact-form button.active[type=submit], .show > .btn-primary.dropdown-toggle, #contact-form .show > button.dropdown-toggle[type=submit] {
   color: #fff;
   background-color: #0a58ca;
   border-color: #0a53be;
 }
-.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, #contact-form .btn-check:checked + button[type=submit]:focus, .btn-check:active + .btn-primary:focus, #contact-form .btn-check:active + button[type=submit]:focus, .btn-primary:active:focus, #contact-form button[type=submit]:active:focus, .btn-primary.active:focus, #contact-form button.active[type=submit]:focus, .show > .btn-primary.dropdown-toggle:focus, #contact-form .show > button.dropdown-toggle[type=submit]:focus {
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-primary:disabled, .btn-primary.disabled {
+.btn-primary:disabled, #contact-form button[type=submit]:disabled, .btn-primary.disabled, #contact-form button.disabled[type=submit] {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
@@ -25655,13 +25701,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, #contact-form .btn-group-lg > button[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, #contact-form .btn-group-sm > button[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -26016,23 +26062,35 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, #contact-form .btn-group > button[type=submit],
+.btn-group-vertical > .btn,
+#contact-form .btn-group-vertical > button[type=submit] {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:checked + .btn, #contact-form .btn-group > .btn-check:checked + button[type=submit],
 .btn-group > .btn-check:focus + .btn,
+#contact-form .btn-group > .btn-check:focus + button[type=submit],
 .btn-group > .btn:hover,
+#contact-form .btn-group > button[type=submit]:hover,
 .btn-group > .btn:focus,
+#contact-form .btn-group > button[type=submit]:focus,
 .btn-group > .btn:active,
+#contact-form .btn-group > button[type=submit]:active,
 .btn-group > .btn.active,
+#contact-form .btn-group > button.active[type=submit],
 .btn-group-vertical > .btn-check:checked + .btn,
+#contact-form .btn-group-vertical > .btn-check:checked + button[type=submit],
 .btn-group-vertical > .btn-check:focus + .btn,
+#contact-form .btn-group-vertical > .btn-check:focus + button[type=submit],
 .btn-group-vertical > .btn:hover,
+#contact-form .btn-group-vertical > button[type=submit]:hover,
 .btn-group-vertical > .btn:focus,
+#contact-form .btn-group-vertical > button[type=submit]:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+#contact-form .btn-group-vertical > button[type=submit]:active,
+.btn-group-vertical > .btn.active,
+#contact-form .btn-group-vertical > button.active[type=submit] {
   z-index: 1;
 }
 
@@ -26045,18 +26103,21 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), #contact-form .btn-group > button[type=submit]:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), #contact-form .btn-group > button[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+#contact-form .btn-group > .btn-group:not(:last-child) > button[type=submit] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), #contact-form .btn-group > button[type=submit]:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
+#contact-form .btn-group > :not(.btn-check) + button[type=submit],
+.btn-group > .btn-group:not(:first-child) > .btn,
+#contact-form .btn-group > .btn-group:not(:first-child) > button[type=submit] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -26072,12 +26133,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #contact-form .btn-group-sm > button[type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #contact-form .btn-group-lg > button[type=submit] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -26087,21 +26148,23 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, #contact-form .btn-group-vertical > button[type=submit],
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), #contact-form .btn-group-vertical > button[type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), #contact-form .btn-group-vertical > button[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+#contact-form .btn-group-vertical > .btn-group:not(:last-child) > button[type=submit] {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn ~ .btn, #contact-form .btn-group-vertical > button[type=submit] ~ .btn, #contact-form .btn-group-vertical > .btn ~ button[type=submit], #contact-form .btn-group-vertical > button[type=submit] ~ button[type=submit],
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+#contact-form .btn-group-vertical > .btn-group:not(:first-child) > button[type=submit] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -27074,7 +27137,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, #contact-form button[type=submit] .badge {
   position: relative;
   top: -1px;
 }
@@ -28513,7 +28576,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before {
+.placeholder.btn::before, #contact-form button.placeholder[type=submit]::before {
   display: inline-block;
   content: "";
 }
@@ -29484,7 +29547,7 @@ textarea.form-control-lg {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3 {
+.mb-3, #contact-form div {
   margin-bottom: 1rem !important;
 }
 
@@ -33399,17 +33462,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-#computacion {
-  width: 60%;
-  margin: 3rem auto;
+#contact-form {
+  width: 40%;
+  margin: 4rem auto;
   font-size: 18px;
 }
-#computacion h1, #computacion .h1 {
+#contact-form h1, #contact-form .h1 {
   font-size: 32px;
   margin-bottom: 1.5rem;
 }
-#computacion h2, #computacion .h2 {
-  font-size: 24px;
+#contact-form div textarea {
+  height: 150px;
 }
 
-/*# sourceMappingURL=computacion.css.map */
+/*# sourceMappingURL=contactame.css.map */

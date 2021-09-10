@@ -20,11 +20,13 @@
                 @extend .navbar-nav;
                 li{
                     @extend .nav-item;
+
                     a{
                         @extend .nav-link, .active;
                         font-size: 18px;
                     }
                 }
+                
             }
         }
     }
