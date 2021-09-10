@@ -1,12 +1,11 @@
 @use "./partials/_navbar.scss";
 @use "./partials/_footer.scss";
+@use "./partials/_default-main.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
     font-family: 'Roboto', sans-serif;
 }
-
-
 
 #inicio-avatar{
     display: block;
@@ -15,18 +14,9 @@ body{
 }
 
 #conocimientos{
-    width: 50%;
     margin: 5rem auto;
-    font-size: 18px;
-
-    h1{
-        font-size: 32px;
-        margin-bottom: 1.5rem;
-    }
 }
 
 #bio{
-    width: 50%;
     margin: 0 auto;
-    font-size: 18px;
 }

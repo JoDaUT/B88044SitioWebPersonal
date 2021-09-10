@@ -6,6 +6,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.custom-primary, #header {
+  background-color: #006599;
+  color: white;
+}
+
 /*!
  * Bootstrap v5.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -7691,7 +7696,7 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
 }
 
-.bg-primary, #header {
+.bg-primary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -22287,6 +22292,19 @@ textarea.form-control-lg {
   font-size: 12px;
 }
 
+main {
+  width: 60%;
+  margin: 3rem auto;
+  font-size: 18px;
+}
+main h1, main .h1 {
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+}
+main h2, main .h2 {
+  font-size: 24px;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -33400,13 +33418,8 @@ body {
 }
 
 #pasatiempos {
-  width: 60%;
-  margin: 5rem auto;
-  font-size: 18px;
-}
-#pasatiempos h1, #pasatiempos .h1 {
-  font-size: 32px;
-  margin-bottom: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 /*# sourceMappingURL=pasatiempos.css.map */

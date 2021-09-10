@@ -1,5 +1,7 @@
 @use "./partials/_navbar.scss";
 @use "./partials/_footer.scss";
+@use "./partials/_pallete.scss";
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
@@ -9,7 +11,6 @@ body{
 #contact-form{
     width: 40%;
     margin: 4rem auto;
-    font-size: 18px;
 
     h1{
         font-size: 32px;
@@ -35,5 +36,7 @@ body{
     }
     button[type="submit"]{
         @extend .btn, .btn-primary;
+        background-color: #006599;
+        color: white;
     }
 }

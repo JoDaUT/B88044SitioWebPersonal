@@ -1,8 +1,9 @@
+@use "./_pallete.scss";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 #header{
-    @extend .navbar, .navbar-expand-lg, .navbar-dark, .bg-primary;
-    
+    @extend .navbar, .navbar-expand-lg, .navbar-dark;
+    @extend .custom-primary;
     div{
         @extend .container-fluid;
         a{

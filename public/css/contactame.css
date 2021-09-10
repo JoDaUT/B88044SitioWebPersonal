@@ -6,6 +6,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.custom-primary, #header {
+  background-color: #006599;
+  color: white;
+}
+
 /*!
  * Bootstrap v5.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -7712,7 +7717,7 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
 }
 
-.bg-primary, #header {
+.bg-primary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -33465,7 +33470,6 @@ body {
 #contact-form {
   width: 40%;
   margin: 4rem auto;
-  font-size: 18px;
 }
 #contact-form h1, #contact-form .h1 {
   font-size: 32px;
@@ -33473,6 +33477,10 @@ body {
 }
 #contact-form div textarea {
   height: 150px;
+}
+#contact-form button[type=submit] {
+  background-color: #006599;
+  color: white;
 }
 
 /*# sourceMappingURL=contactame.css.map */

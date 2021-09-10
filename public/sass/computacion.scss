@@ -1,21 +1,8 @@
 @use "./partials/_navbar.scss";
 @use "./partials/_footer.scss";
+@use "./partials/_default-main.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
     font-family: 'Roboto', sans-serif;
-}
-
-#computacion{
-    width: 60%;
-    margin: 3rem auto;
-    font-size: 18px;
-
-    h1{
-        font-size: 32px;
-        margin-bottom: 1.5rem;
-    }
-    h2{
-        font-size: 24px;
-    }
 }
