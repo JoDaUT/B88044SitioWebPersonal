@@ -1,5 +1,6 @@
 @use "./_pallete.scss";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+
 main{
     width: 60%;
     margin: 3rem auto;
@@ -11,6 +12,14 @@ main{
     }
     h2{
         font-size: 24px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 95% !important;
+    }
+
+    @media only screen and (max-width: 992px) {
+        width: 80%;
     }
 }
 
