@@ -1,3 +1,5 @@
+@use "./_pallete.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 main{
     width: 60%;
     margin: 3rem auto;
@@ -10,4 +12,8 @@ main{
     h2{
         font-size: 24px;
     }
+}
+
+.active{
+   @extend .active
 }

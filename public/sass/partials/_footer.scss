@@ -1,9 +1,9 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 #footer{
-    @extend .text-center, .text-lg-start, .bg-light, .text-muted, .fixed-bottom;
+    @extend .text-center, .text-lg-start, .bg-light, .text-muted;
     div{
-        @extend .text-center, .p-0;
+        @extend .text-center, .p-2;
         background-color: rgba(0, 0, 0, 0.05);
         font-size: 12px;
     }

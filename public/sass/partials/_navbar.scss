@@ -4,6 +4,11 @@
 #header{
     @extend .navbar, .navbar-expand-lg, .navbar-dark;
     @extend .custom-primary;
+
+    #logo{
+        color: rgba(255, 255, 255, 0.55);
+    }
+
     div{
         @extend .container-fluid;
         a{
@@ -14,6 +19,7 @@
             span{
                @extend .navbar-toggler-icon; 
             }  
+            
         }
         div{
             @extend .collapse, .navbar-collapse;
@@ -23,9 +29,10 @@
                     @extend .nav-item;
 
                     a{
-                        @extend .nav-link, .active;
+                        @extend .nav-link;
                         font-size: 18px;
                     }
+                    
                 }
                 
             }
