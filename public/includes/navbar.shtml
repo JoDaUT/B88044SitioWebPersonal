@@ -1,0 +1,35 @@
+ <!--navbar-->
+ <nav id="header">
+    <div>
+      <a id="logo" href="./inicio.html">@JoDaUT</a>
+      <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+      <div id="navbarNav">
+        <ul>
+          <li>
+            <a href="./inicio.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./mis-objetivos.html">Mis objetivos</a>
+          </li>
+          <li>
+            <a href="./computacion.html">Computación</a>
+          </li>
+
+          <li>
+            <a href="./pasatiempos.html">Pasatiempos</a>
+          </li>
+
+          <li>
+            <a href="./acerca-de.html">Acerca de</a>
+          </li>
+
+          <li>
+            <a href="./contactame.html">Contácteme</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
