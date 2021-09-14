@@ -1,10 +1,8 @@
 @use "./_pallete.scss";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-body{
-    min-height: 100% !important;
-    height: 100% !important;
-    background-color: red;
+html, body, main{
+    min-height: 100vh !important;
 }
 
 main{

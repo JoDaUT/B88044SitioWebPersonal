@@ -15,7 +15,6 @@
 <body>
     <!--#include file="./includes/navbar.html" -->
 
-
     <!--content-->
     <main id="computacion">
         <h1>Ciencias de la Computación e Informática</h1>
@@ -36,6 +35,8 @@
     </main>
 
     <!--#include file="./includes/footer.html" -->
+
+    
 
 </body>
 

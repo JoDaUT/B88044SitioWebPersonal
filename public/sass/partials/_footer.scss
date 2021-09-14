@@ -3,7 +3,7 @@
 #footer{
     @extend .text-center, .text-lg-start, .bg-light, .text-muted;
     position: relative;
-    bottom: -10px;
+    bottom: 0px;
     width: 100%;
     div{
         @extend .text-center, .p-2;

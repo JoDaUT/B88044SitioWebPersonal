@@ -1,7 +1,7 @@
 @use "./partials/_navbar.scss";
 @use "./partials/_footer.scss";
 @use "./partials/_pallete.scss";
-@use "./partials/default-main";
+@use "./partials/_default-main.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{

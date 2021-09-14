@@ -22331,7 +22331,7 @@ textarea.form-control-lg {
 }
 #footer {
   position: relative;
-  bottom: -10px;
+  bottom: 0px;
   width: 100%;
 }
 #footer div {
@@ -33474,10 +33474,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  min-height: 100% !important;
-  height: 100% !important;
-  background-color: red;
+html, body, main {
+  min-height: 100vh !important;
 }
 
 main {

@@ -13,6 +13,7 @@
 <body>
     <!--#include file="./includes/navbar.html" -->
 
+
     <!--content-->
     <main>
       <img id="inicio-avatar" src="./assets/avatar.jpg" title="avatar" alt="avatar" width="150px" height="150px">
@@ -45,6 +46,9 @@
 
     </main>
      <!--#include file="./includes/footer.html" -->
+
+
+  
 
 </body>
 </html>
