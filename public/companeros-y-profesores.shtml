@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companeros y Profesores</title>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/companeros-y-profesores.css">
+
+</head>
+
+<body>
+    <!--#include file="./includes/navbar.html" -->
+
+
+    <!--content-->
+    <main id="por-que">
+        <h1>Compañeros y profesores</h1>
+
+        <p>Los compañeros con los que más he hecho equipo durante estos tres años son: Eduardo Ayales y Jose David
+            Delgado. Ambos son muy capaces, responsables y elementos muy valiosos en un equipo. Cuando hacemos equipo
+            logramos hacer los trabajos con mucha eficiencia en cuanto al tiempo y la distribución de carga.</p>
+        <p>Los profesores que más me han enseñado son Adrián Lara, profesor de redes; Fransisco Arroyo, de programación
+            paralela. Ambos cursos me resultaron muy difíciles, pero a la vez ambas fueron dos buenas oportunidades de
+            aprendizaje. Quizás los dos cursos que más utilidad de han dejado.</p>
+        <p>Gracias a estas personas he aprendido muchísimo y he crecido mucho durante estos años.</p>
+
+
+        <!--#include file="./includes/computacion-related.html" -->
+    </main>
+
+    <!--#include file="./includes/footer.html" -->
+
+</body>
+
+</html>

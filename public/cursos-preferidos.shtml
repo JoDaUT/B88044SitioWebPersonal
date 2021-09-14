@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos Preferidos</title>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/cursos-preferidos.css">
+
+</head>
+
+<body>
+    <!--#include file="./includes/navbar.html" -->
+
+
+    <!--content-->
+    <main id="por-que">
+        <h1>Cursos preferidos</h1>
+
+        <p>Los cursos con los que más he aprendido durante la carrera y los que más me han marcado son los siguientes:
+        </p>
+        <ol>
+            <li>Proyecto Integrador de Redes y Sistemas Operativos: Aprendí bastante acerca de sockets y sistemas
+                distribuidos. Además construimos nuestra propia implementación de un File System.</li>
+            <li>Programación Paralela y Concurrente: Uno de los cursos más importantes. No he encontrado curso por fuera
+                de la Universidad que me haya enseñado con la profundidad que aprendí en ese curso acerca de
+                concurrencia, hilos y procesos.</li>
+            <li>Programación I: Un curso donde aprendí muchas bases de la programación que me han sido de gran utilidad.
+            </li>
+            <li>Programación II: Dado que es la continuación de Progra I, en este curso aprendí muchos más conceptos
+                relacionados a la Programación Orietada a Objetos.</li>
+        </ol>
+
+        <!--#include file="./includes/computacion-related.html" -->
+    </main>
+
+    <!--#include file="./includes/footer.html" -->
+
+</body>
+
+</html>

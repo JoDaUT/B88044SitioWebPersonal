@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por Que Computacion</title>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/por-que-computacion.css">
+
+</head>
+
+<body>
+    <!--#include file="./includes/navbar.html" -->
+
+
+    <!--content-->
+    <main id="por-que">
+        <h1>¿Por qué computación?</h1>
+
+        <p>Elegí esta carrera porque el software es una industria en constante crecimiento actualmente, y de las más interesantes a nivel laboral. </p>
+        <p>Aprendí a programar a los 16 años sin saber que estaba programando. Solo sabía que tenía un problema que resolver y luego de investigar me di cuenta de que podía resolverlo con escribir palabras extrañas en un archivo especial y luego ejecutarlo.</p>
+        <p>De manera que veo en el software una herramienta para crecer profesionalmente. Así que aposté por estudiar una carrera afín a eso.</p>
+
+
+        <!--#include file="./includes/computacion-related.html" -->
+    </main>
+
+   <!--#include file="./includes/footer.html" -->
+
+</body>
+
+</html>
