@@ -22287,6 +22287,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#footer {
+  position: relative;
+  bottom: -10px;
+  width: 100%;
+}
 #footer div {
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 12px;
@@ -33406,6 +33411,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  min-height: 100% !important;
+  height: 100% !important;
+  background-color: red;
+}
+
 main {
   width: 60%;
   margin: 3rem auto;

@@ -1,7 +1,7 @@
 @use "./partials/_navbar.scss";
 @use "./partials/_footer.scss";
 @use "./partials/_pallete.scss";
-
+@use "./partials/default-main";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
@@ -9,7 +9,7 @@ body{
 }
 
 #contact-form{
-    width: 40%;
+    width: 80%;
     margin: 4rem auto;
 
     h1{
@@ -17,6 +17,13 @@ body{
         margin-bottom: 1.5rem;
     }
     
+    @media only screen and (max-width: 600px) {
+        width: 95% !important;
+    }
+
+    @media only screen and (max-width: 992px) {
+        width: 80%;
+    }
 
     div{
         @extend .mb-3;

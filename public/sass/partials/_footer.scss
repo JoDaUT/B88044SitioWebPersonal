@@ -2,6 +2,9 @@
 
 #footer{
     @extend .text-center, .text-lg-start, .bg-light, .text-muted;
+    position: relative;
+    bottom: -10px;
+    width: 100%;
     div{
         @extend .text-center, .p-2;
         background-color: rgba(0, 0, 0, 0.05);
